@@ -8,6 +8,9 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import itemRoutes from "./routes/itemRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+// import webhook from "./routes/webhook.js"
+import paymentRoutes from "./routes/paymentRoutes.js";
+
 
 dotenv.config();
 const app = express();
@@ -29,6 +32,8 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/items", itemRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/payment", paymentRoutes);
+// app.use("/api", webhook);
 
 // Root route
 app.get("/", (req, res) => {
