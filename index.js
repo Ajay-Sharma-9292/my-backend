@@ -31,15 +31,15 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 
 // Root route
-// app.get("/", (req, res) => {
-//   res.send("API is running...");
-// });
 app.get("/", (req, res) => {
-  res.send({
-    activeStatus:true,
-    error:false
-    })
+  res.send("API is running...");
 });
+// app.get("/", (req, res) => {
+//   res.send({
+//     activeStatus:true,
+//     error:false
+//     })
+// });
 
 // Start server after DB connected
 connectDB().then(() => {
