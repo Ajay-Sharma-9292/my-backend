@@ -8,7 +8,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import itemRoutes from "./routes/itemRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
-// import webhook from "./routes/webhook.js"
+import webhookRoutes from "./routes/webhook.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 
 
@@ -33,18 +33,12 @@ app.use("/api/items", itemRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/payment", paymentRoutes);
-// app.use("/api", webhook);
+app.use("/api/webhook", webhookRoutes);
 
 // Root route
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
-// app.get("/", (req, res) => {
-//   res.send({
-//     activeStatus:true,
-//     error:false
-//     })
-// });
 
 // Start server after DB connected
 connectDB().then(() => {

@@ -1,5 +1,5 @@
 import Category from "../models/Category.js";
-import Item from "../models/Item.js"; // ✅ Import Item to delete associated items
+import Item from "../models/Item.js"; 
 
 // Create a new category
 export const createCategory = async (req, res) => {

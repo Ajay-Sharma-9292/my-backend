@@ -8,7 +8,7 @@ export const createOrder = async (req, res) => {
     const { amount } = req.body;
 
     const options = {
-      amount: amount * 100, // Razorpay expects amount in paisa
+      amount: amount * 100, 
       currency: "INR",
       receipt: `order_rcptid_${Math.floor(Math.random() * 1000000)}`,
     };
